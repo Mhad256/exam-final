@@ -1,0 +1,6 @@
+public  class HealthUtil{
+    public static double calculateBMI(double weightkg, double heightM) {
+         return  weightkg / (heightM * heightM);
+        }
+       
+    }
