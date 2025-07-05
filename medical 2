@@ -1,0 +1,17 @@
+Java.util. Random;
+public class PassengerSource {
+    private company company;
+    private Random rand;
+    public  PassengerSource(company company) {
+        this.company = company;
+        this.rand = new Random();
+    }
+    public boolean requestpickup() {
+        int x1 = rand.nextInt(101);// 0 to 100
+        int y1 = rand.nextInt(101);// 
+        int x2 = rand.nextInt(101);// 
+        int y2 = rand.nextInt(101);//
+     Location pickup = new Location(x1, y1);
+        Location dropoff = new Location(x2, y2);
+            Passenger passenger = new Passenger(pickup, dropoff);
+            return company.addPassenger(passenger);
