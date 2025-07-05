@@ -1,0 +1,30 @@
+             java 
+import static org .junit.Assert.*;
+import org .junit.Before;
+import org .junit.Test;
+public class company Test;
+       private Company company;
+         @Before
+         public void setUp() {
+                company = new Company();
+            company.addVehicle(new Vehicle("Car", 4));// assume method adds avaialble vehicles
+        }
+            @Test
+            public void testsucessfulpickup() {
+                    Location pickup = new Location(10, 20);
+                    Location destination = new Location(30, 40);
+                    Passenger p = new Passenger(pickup, destination);
+
+                    assertTrue(company.schedulePickup(p));
+            }
+            @Test
+            public void testpickupFailsWithoutVehicle() {
+                    company = emptyCompany = new Company();// no vehicles available
+                    Location pickup = new Location(0, 0);
+                    Location destination = new Location(10, 10);
+                    Passenger p = new Passenger(pickup, destination);
+
+                    assertFalse(company.schedulePickup(p));
+            }
+        }
+           
