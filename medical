@@ -1,0 +1,22 @@
+import java .io.*
+
+public class MedicalFileReader{
+    public static void main (String[] args) {
+        File  file = new File("medical_records.txt");
+        int wordCount = 0;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+            
+                wordCount += line.split("\\s+").length; // Split by whitespace to count words
+            }
+            System.out.println(" total words: " + wordCount);
+        }catch(FileNotFoundException e) {
+            System.err.println("File not found: " + e.getMessage());
+        } catch (IOException e) {
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+
+       
+    }
