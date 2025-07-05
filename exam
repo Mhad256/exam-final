@@ -1,0 +1,15 @@
+public cla patient{public cla patient{
+    private stringg id;
+    privatestring allergies;
+
+    public patient(String id, String allergies) {
+        this.id = id;
+        this.allergies = allergies;
+    }v
+    private stringg id;
+    privatestring allergies;
+
+    public patient(String id, String allergies) {
+        this.id = id;
+        this.allergies = allergies;
+    }
