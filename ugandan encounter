@@ -1,0 +1,21 @@
+import java .util,scanner;
+
+public class ugandacounter {
+    public  static  void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+       system .out.printin("Enter the numeber books description : ");
+       string description = scanner.nextLine();
+    
+       string LowercaseDesc = description.toLowerCase();
+       string target = "uganda";
+         int count = 0;
+
+         int index = LowercaseDesc.indexOf(target);
+         while (index != -1) {
+             count++;
+             index = LowercaseDesc.indexOf(target, index + 1);
+         }
+
+       System.out.println("The word 'uganda' appears: " + count);
+   }
+}
