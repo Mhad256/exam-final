@@ -1,0 +1,7 @@
+try{
+    // file read
+} catch (IOException e) {
+    // handle error 
+} finally {
+    reader.close();//  runs even if an error occurs
+}
