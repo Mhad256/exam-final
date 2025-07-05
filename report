@@ -1,0 +1,9 @@
+public class ReportGenertor {
+    public void generator Report (string patientId, ) {
+        // Logic to generate report
+        System.out.println("basic report  for patient : " + patientId + " )
+    }
+        public void generateReport(string patientID, boolean includeLabResults) {
+        System.out.println("Detail report with labs: " + patientID);
+    }
+}
